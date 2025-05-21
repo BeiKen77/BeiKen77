@@ -1,0 +1,16 @@
+name: Social Readme
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: zylele/social-readme@master
+        with:
+          douban_name: li778057151
+          douban_limit: 5 # 豆瓣最新动态数量
+          commit_message: Updated social rss by social-readme # commit说明
