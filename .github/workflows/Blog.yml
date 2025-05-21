@@ -1,0 +1,18 @@
+name: Recent Blog
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-readme-feed
+    steps:
+      - uses: actions/checkout@v4
+      - uses: sarisia/actions-readme-feed@v1
+        with:
+          url: "https://20021202.xyz/feed.rss"
+          file: "README.md"
+      - uses: sarisia/actions-commit@master
