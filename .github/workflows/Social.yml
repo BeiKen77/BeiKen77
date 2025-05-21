@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: zylele/social-readme@master
         with:
-          douban_name: li778057151
+          douban_name: li20021202
           douban_limit: 5 # 豆瓣最新动态数量
           commit_message: Updated social rss by social-readme # commit说明
